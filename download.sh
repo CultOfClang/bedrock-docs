@@ -1,3 +1,5 @@
+#!/bin/sh
+cd $GITHUB_REF
 rm -rf behavior resource
 curl -L https://aka.ms/behaviorpacktemplate -o behaviorpacktemplate.zip
 unzip behaviorpacktemplate.zip -d behavior
