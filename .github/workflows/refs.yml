@@ -24,13 +24,8 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Download refs
-      run: |
-        cd $GITHUB_WORKSPACE
-        rm -rf behavior resource
-        curl -L https://aka.ms/behaviorpacktemplate -o behaviorpacktemplate.zip
-        unzip behaviorpacktemplate.zip -d behavior
-        rm -f behaviorpacktemplate.zip
-        curl -L https://aka.ms/behaviorpacktemplate -o resourcepacktemplate.zip
-        unzip resourcepacktemplate.zip -d resource
-        rm -f resourcepacktemplate.zip
+      run: $GITHUB_WORKSPACE/download.sh
     
+    - uses: stefanzweifel/git-auto-commit-action@v4.1.2
+      with:
+        commit_message: Download latest
