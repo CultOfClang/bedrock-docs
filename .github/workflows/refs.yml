@@ -25,7 +25,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Download refs
       run: |
-        cd $GITHUB_REF
+        cd $GITHUB_WORKSPACE
         rm -rf behavior resource
         curl -L https://aka.ms/behaviorpacktemplate -o behaviorpacktemplate.zip
         unzip behaviorpacktemplate.zip -d behavior
