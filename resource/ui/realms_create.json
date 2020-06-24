@@ -455,14 +455,14 @@
       },
       {
         "tier@stack_item": {
-          "size": [ "100% - 4px", 40 ],
+          "size": [ "100% - 4px", "100%c" ],
           "controls": [
             {
               "choose_tier_panel@choose_tier_panel": {
                 "ignored": "$hide_tier",
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
-                "size": [ "100%", "100% - 2px" ],
+                "size": [ "100%", 40 ],
                 "offset": [ 0, 2 ]
               }
             }
@@ -475,7 +475,6 @@
           "controls": [
             {
               "terms_and_conditions_panel@terms_and_conditions_panel": {
-                "ignored": "$hide_terms_and_conditions",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "size": [ "100% - 4px", "100% - 4px" ]
@@ -488,6 +487,17 @@
         "padding_1": {
           "type": "panel",
           "size": [ 0, 2 ]
+        }
+      },
+      {
+        "realms_terms_info@settings_common.option_info_label": {
+          "$container_text_binding_name": "#realms_terms_info",
+          "$used_fontsize": "normal",
+          "$used_fonttype": "smooth",
+          "$show_option_label": false,
+          "$show_for_ios|default": false,
+          "layer": 3,
+          "size": [ "100% - 4px", "100%c" ]
         }
       },
       {

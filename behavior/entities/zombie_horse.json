@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.16.0",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:zombie_horse",
@@ -35,7 +35,6 @@
           "table": "loot_tables/entities/zombie_horse.json"
         },
         "minecraft:rideable": {
-          "priority": 0,
           "seat_count": 1,
           "family_types": [
             "zombie"
@@ -110,6 +109,9 @@
         "max_distance": 10.0
       },
       "minecraft:balloonable": {
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
       },
       "minecraft:behavior.panic": {
         "priority": 1,

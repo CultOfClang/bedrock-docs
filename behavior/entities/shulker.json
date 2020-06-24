@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.16.0",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:shulker",
@@ -145,7 +145,6 @@
         "probability": 0.02
       },
       "minecraft:shooter": {
-        "type": "ShulkerBullet",
         "def": "minecraft:shulker_bullet"
       },
       "minecraft:behavior.random_look_around": {

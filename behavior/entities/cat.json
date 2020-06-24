@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.16.0",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:cat",
@@ -41,6 +41,7 @@
         },
         "minecraft:breedable": {
           "require_tame": true,
+          "require_full_health": true,
           "allow_sitting": true,
           "breeds_with": {
             "mate_type": "minecraft:cat",
@@ -77,7 +78,6 @@
         },
         "minecraft:behavior.nearest_attackable_target": {
           "priority": 1,
-          "attack_interval": 10,
           "reselect_targets": true,
           "within_radius": 16.0,
           "entity_types": [
@@ -341,6 +341,9 @@
         "can_migrate": true,
         "first_founding_reward": 0
       },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -360,9 +363,16 @@
       },
       "minecraft:behavior.ocelotattack": {
         "priority": 4,
-        "walk_speed_multiplier": 0.8,
+        "cooldown_time": 1.0,
+        "x_max_rotation": 30.0,
+        "y_max_head_rotation": 30.0,
+        "max_distance": 15.0,
+        "max_sneak_range": 15.0,
+        "max_sprint_range": 4.0,
+        "reach_multiplier": 2.0,
+        "sneak_speed_multiplier": 0.6,
         "sprint_speed_multiplier": 1.33,
-        "sneak_speed_multiplier": 0.6
+        "walk_speed_multiplier": 0.8
       },
       "minecraft:behavior.random_stroll": {
         "priority": 8,

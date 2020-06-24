@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.16.0",
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:panda",
@@ -123,9 +123,8 @@
         },
         "minecraft:behavior.melee_attack": {
           "priority": 2,
-          "target_dist": 1.2,
-          "track_target": true,
           "attack_once": true,
+          "track_target": true,
           "reach_multiplier": 1.0
         }
       },
@@ -186,7 +185,6 @@
                 "value": "panda"
               },
               "max_dist": 16,
-              "walk_speed_multiplier": 1.0,
               "sprint_speed_multiplier": 1.5
             }
           ]
@@ -271,7 +269,6 @@
         },
         "minecraft:behavior.melee_attack": {
           "priority": 2,
-          "target_dist": 1.2,
           "track_target": true,
           "reach_multiplier": 1.0
         },
@@ -390,6 +387,9 @@
       "minecraft:water_movement": {
         "drag_factor": 0.98
       },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -444,6 +444,7 @@
         "speed_multiplier": 1.25
       },
       "minecraft:balloonable": {
+		"mass": 1.5
       },
       "minecraft:rideable": {
         "seat_count": 1,
