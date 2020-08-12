@@ -1647,20 +1647,15 @@
          },
          "piglin" : {
             "events" : {
-               "admire" : "mob.piglin.admiring_item",
-               "ambient" : "mob.piglin.ambient",
-               "ambient.in.raid" : {
-                  "pitch" : [ 0.80, 1.20 ],
-                  "sound" : "mob.piglin.idle",
-                  "volume" : 3.0
-               },
-               "angry" : "mob.piglin.angry",
-               "attack" : "mob.piglin.attack",
-               "celebrate" : "mob.piglin.celebrate",
-               "death" : "mob.piglin.death",
-               "hurt" : "mob.piglin.hurt",
-               "jealous" : "mob.piglin.jealous",
-               "retreat" : "mob.piglin.retreat",
+               "ambient": "mob.piglin.ambient",
+               "angry": "mob.piglin.angry",
+               "attack": "mob.piglin.attack",
+               "celebrate": "mob.piglin.celebrate",
+               "hurt": "mob.piglin.hurt",
+               "death": "mob.piglin.death",
+               "retreat": "mob.piglin.retreat",
+               "jealous": "mob.piglin.jealous",
+               "admire": "mob.piglin.admiring_item",
                "step" : {
                   "sound" : "mob.piglin.step",
                   "volume" : 0.350
@@ -1669,6 +1664,22 @@
             "pitch" : [ 0.80, 1.20 ],
             "volume" : 1.0
          },
+
+         "piglin_brute": {
+            "events": {
+               "ambient": "mob.piglin_brute.ambient",
+               "angry": "mob.piglin_brute.angry",
+               "hurt": "mob.piglin_brute.hurt",
+               "death": "mob.piglin_brute.death",
+               "step": {
+                  "sound": "mob.piglin_brute.step",
+                  "volume": 0.35
+               }
+            },
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0            
+          },
+
          "pillager" : {
             "events" : {
                "ambient" : "mob.pillager.idle",
@@ -2200,14 +2211,11 @@
          },
          "zoglin" : {
             "events" : {
-               "ambient" : "mob.zoglin.say",
-               "boost" : {
-                  "pitch" : 1.0,
-                  "sound" : "mob.zoglin.boost",
-                  "volume" : 1.0
-               },
-               "death" : "mob.zoglin.death",
-               "hurt" : "mob.zoglin.say",
+               "ambient": "mob.zoglin.idle",
+               "angry" : "mob.zoglin.angry",
+               "hurt": "mob.zoglin.hurt",
+               "death": "mob.zoglin.death",
+               "attack": "mob.zoglin.attack",
                "step" : {
                   "pitch" : 1.0,
                   "sound" : "mob.zoglin.step",

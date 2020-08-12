@@ -11,7 +11,6 @@
          ]
       },
       "ambient.cave" : {
-         "__use_legacy_max_distance" : "true",
          "category" : "ambient",
          "sounds" : [
             "sounds/cave/cave1",
@@ -117,6 +116,15 @@
             },
             "sounds/ambient/weather/thunder2",
             "sounds/ambient/weather/thunder3"
+         ]
+      },
+      "armor.equip_netherite": {
+         "category": "neutral",
+         "sounds": [
+            "sounds/armor/equip_netherite1",
+            "sounds/armor/equip_netherite2",
+            "sounds/armor/equip_netherite3",
+            "sounds/armor/equip_netherite4"
          ]
       },
       "armor.equip_chain" : {
@@ -6057,6 +6065,130 @@
          ],
          "subtitle" : "subtitles.mob.piglin.step"
       },
+      "mob.piglin_brute.ambient": {
+         "sounds": [
+           {
+               "load_on_low_memory": true,
+               "name": "sounds/mob/piglin_brute/idle1",
+               "volume": 0.8
+           },
+           {
+               "name": "sounds/mob/piglin_brute/idle2",
+               "volume": 0.75
+           },
+           {
+               "name": "sounds/mob/piglin_brute/idle3",
+               "volume": 0.8
+           },
+           {
+               "name": "sounds/mob/piglin_brute/idle4",
+               "volume": 0.8
+           },
+           {
+               "name": "sounds/mob/piglin_brute/idle5",
+               "volume": 0.8
+           }
+         ],
+         "subtitle": "subtitles.mob.piglin_brute.ambient"
+       },
+       "mob.piglin_brute.angry": {
+         "sounds": [
+           {
+               "load_on_low_memory": true,
+               "name": "sounds/mob/piglin_brute/angry1",
+               "volume": 0.7
+           },
+           {
+               "name": "sounds/mob/piglin_brute/angry2",
+               "volume": 0.7
+           },
+           {
+               "name": "sounds/mob/piglin_brute/angry3",
+               "volume": 0.7
+           },
+           {
+               "name": "sounds/mob/piglin_brute/angry4",
+               "volume": 0.7
+           }
+         ],
+         "subtitle": "subtitles.mob.piglin_brute.angry"
+       },
+       "mob.piglin_brute.converted_to_zombified": {
+         "sounds": [
+           {
+               "load_on_low_memory": true,
+               "name": "sounds/mob/piglin/converted1",
+               "volume": 1
+           },
+           {
+               "name": "sounds/mob/piglin/converted2",
+               "volume": 1
+           }
+         ],
+         "subtitle": "subtitles.mob.piglin_brute.converted_to_zombified"
+       },
+       "mob.piglin_brute.hurt": {
+         "sounds": [
+           {
+               "load_on_low_memory": true,
+               "name": "sounds/mob/piglin_brute/hurt1",
+               "volume": 0.7
+           },
+           {
+               "name": "sounds/mob/piglin_brute/hurt2",
+               "volume": 0.7
+           },
+           {
+               "name": "sounds/mob/piglin_brute/hurt3",
+               "volume": 0.7
+           }
+         ],
+         "subtitle": "subtitles.mob.piglin_brute.hurt"
+       },
+       "mob.piglin_brute.death": {
+         "sounds": [
+           {
+               "load_on_low_memory": true,
+               "name": "sounds/mob/piglin_brute/death1",
+               "volume": 0.7
+           },
+           {
+               "name": "sounds/mob/piglin_brute/death2",
+               "volume": 0.7
+           },
+           {
+               "name": "sounds/mob/piglin_brute/death3",
+               "volume": 0.8
+           }
+         ],
+         "subtitle": "subtitles.mob.piglin_brute.death"
+       },
+       "mob.piglin_brute.step": {
+         "sounds": [
+           {
+               "load_on_low_memory": true,
+               "name": "sounds/mob/piglin_brute/step1",
+               "volume": 0.75
+           },
+           {
+               "name": "sounds/mob/piglin_brute/step2",
+               "volume": 0.75
+           },
+           {
+               "name": "sounds/mob/piglin_brute/step3",
+               "volume": 0.75
+           },
+           {
+               "name": "sounds/mob/piglin_brute/step4",
+               "volume": 0.75
+           },
+           {
+               "name": "sounds/mob/piglin_brute/step5",
+               "volume": 0.75
+           }
+         ],
+         "subtitle": "subtitles.mob.piglin_brute.step"
+       },
       "mob.pillager.celebrate" : {
          "__use_legacy_max_distance" : "true",
          "sounds" : [
@@ -7209,41 +7341,64 @@
          "category" : "neutral",
          "sounds" : [ "sounds/mob/wolf/whine" ]
       },
-      "mob.zoglin.boost" : {
+      "mob.zoglin.angry" : {
          "category" : "neutral",
          "sounds" : [
-            "sounds/mob/pig/boost1",
-            "sounds/mob/pig/boost2",
-            "sounds/mob/pig/boost3",
-            "sounds/mob/pig/boost4long",
-            "sounds/mob/pig/boost5long"
+            "sounds/mob/zoglin/angry1",
+            "sounds/mob/zoglin/angry2",
+            "sounds/mob/zoglin/angry3"
          ]
       },
       "mob.zoglin.death" : {
          "category" : "neutral",
-         "sounds" : [ "sounds/mob/pig/death" ]
+         "sounds" : [
+            "sounds/mob/zoglin/death1",
+            "sounds/mob/zoglin/death2",
+            "sounds/mob/zoglin/death3"
+         ]
       },
-      "mob.zoglin.say" : {
+      "mob.zoglin.idle" : {
          "category" : "neutral",
          "sounds" : [
             {
                "load_on_low_memory" : true,
-               "name" : "sounds/mob/pig/say1"
+               "name" : "sounds/mob/zoglin/idle1"
             },
-            "sounds/mob/pig/say2",
-            "sounds/mob/pig/say3"
+            "sounds/mob/zoglin/idle2",
+            "sounds/mob/zoglin/idle3",
+            "sounds/mob/zoglin/idle4",
+            "sounds/mob/zoglin/idle5",
+            "sounds/mob/zoglin/idle6"
          ]
       },
+      "mob.zoglin.hurt": {
+         "category": "neutral",
+         "sounds": [
+           {
+               "load_on_low_memory": true,  
+               "name": "sounds/mob/zoglin/hurt1"
+           },
+           "sounds/mob/zoglin/hurt2",
+           "sounds/mob/zoglin/hurt3"
+         ]
+       },
       "mob.zoglin.step" : {
          "category" : "neutral",
          "sounds" : [
-            "sounds/mob/pig/step1",
-            "sounds/mob/pig/step2",
-            "sounds/mob/pig/step3",
-            "sounds/mob/pig/step4",
-            "sounds/mob/pig/step5"
+            "sounds/mob/zoglin/step1",
+            "sounds/mob/zoglin/step2",
+            "sounds/mob/zoglin/step3",
+            "sounds/mob/zoglin/step4",
+            "sounds/mob/zoglin/step5"
          ]
       },
+      "mob.zoglin.attack": {
+         "category": "neutral",
+         "sounds": [
+            "sounds/mob/zoglin/attack1",
+            "sounds/mob/zoglin/attack2"
+         ]
+       },
       "mob.zombie.death" : {
          "__use_legacy_max_distance" : "true",
          "category" : "hostile",

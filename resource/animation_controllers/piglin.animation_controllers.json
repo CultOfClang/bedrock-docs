@@ -1,45 +1,6 @@
 {
 	"format_version" : "1.10.0",
-	"animation_controllers" : {
-		"controller.animation.piglin.move" : {
-			"initial_state" : "default",
-			"states" : {
-				"default" : {
-					"animations" : [ "move" ]
-				}
-			}
-		},
-		"controller.animation.piglin.celebrate": {
-			"initial_state": "default",
-			"states": {
-				"default": {
-					"transitions": [
-						{
-							"celebrating" : "query.is_celebrating == 1"
-						},
-						{
-							"celebrating_special": "query.is_celebrating_special == 1"
-						}
-					]
-				},
-				"celebrating": {
-					"animations": [ "celebrate_hunt" ],
-					"transitions": [
-						{
-							"default": "query.is_celebrating == 0"
-						}
-					]
-				},
-				"celebrating_special": {
-					"animations": [ "celebrate_hunt_special" ],
-					"transitions": [
-						{
-							"default": "query.is_celebrating_special == 0"
-						}
-					]
-				}
-			}
-		},
+	"animation_controllers": {
 		"controller.animation.piglin.attack" : {
 			"initial_state" : "default",
 			"states" : {
@@ -63,7 +24,10 @@
 							"ranged_charge" : "query.variant == 0 && variable.attack_state == 2 && !query.is_admiring"
 						},
 						{
-							"melee_attack": "variable.has_target && query.variant == 1 && variable.attack_time >= 0.0 && !query.is_admiring"
+							"hand_attack": "variable.has_target && query.variant == 1 && !query.is_item_equipped && variable.attack_time >= 0.0 && !query.is_admiring"
+						},
+						{
+							"melee_attack": "variable.has_target && query.variant == 1 && query.is_item_equipped && variable.attack_time >= 0.0 && !query.is_admiring"
 						}
 					]
 				},
@@ -82,25 +46,17 @@
 					"animations": ["melee_attack"],
 					"transitions" : [
 						{
-							"default" : "!variable.has_target || variable.attack_time < 0.0 ||  query.is_admiring"
+							"default" : "!query.is_item_equipped || !variable.has_target || variable.attack_time < 0.0 ||  query.is_admiring"
 						}
 					]
-				}
-			}
-		},
-		"controller.animation.piglin.admire" : {
-			"initial_state" : "default",
-			"states" : {
-				"default" : {
-					"transitions": [{
-						"admiring": "query.is_admiring"
-					}]
 				},
-				"admiring": {
-					"animations": ["admire"],
-					"transitions": [{
-						"default": "!query.is_admiring"
-					}]
+				"hand_attack" : {
+					"animations": ["hand_attack"],
+					"transitions" : [
+						{
+							"default" : "query.is_item_equipped || !variable.has_target || variable.attack_time < 0.0 ||  query.is_admiring"
+						}
+					]
 				}
 			}
 		}
