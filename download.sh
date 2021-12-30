@@ -1,7 +1,8 @@
 #!/bin/sh
 cd $GITHUB_WORKSPACE
-rm -rf behavior resource beta stable
+rm -rf beta stable
 
+#download stable
 mkdir stable
 cd stable
 curl -L https://aka.ms/behaviorpacktemplate -o behaviorpacktemplate.zip
@@ -15,7 +16,6 @@ cd -
 #download beta
 mkdir beta
 cd beta
-rm -rf behavior resource
 curl -L https://aka.ms/MinecraftBetaBehaviors -o behaviorpacktemplate.zip
 unzip behaviorpacktemplate.zip -d behavior
 rm -f behaviorpacktemplate.zip
